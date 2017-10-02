@@ -1,0 +1,21 @@
+check zero value 
+
+function validateForm() {
+            var x = document.getElementById('txtEmployee').value;
+            var y = document.getElementById('txtCompany').value;
+
+            if (x == "" && y == "") {
+                alert("Employee or Company name must be filled out");
+                return false;
+            }
+        }
+        $(function () {
+            $("#target").submit(function (event) {
+                event.preventDefault();
+                validateForm();
+            });
+        });
+        
+        //////////////////////////////////////////////////////////////////////////////////////////////
+        
+        
