@@ -1,0 +1,12 @@
+indexing table
+
+@foreach (var item in Model.Select((x, i) => new { Data = x, Index = i+1 }))
+{
+<td>
+@item.Index
+</td>
+<td>
+@Html.DisplayFor(modelItem => item.Data.depart_name)
+</td>
+</tr>
+}
