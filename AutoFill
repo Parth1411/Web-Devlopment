@@ -1,0 +1,115 @@
+ $(function ($) {
+            $("[id*=txtEmployee]").autocomplete({
+                source: function (request, response) {
+                    $.ajax({
+                        url: '/EmployeeInformation/AutoCompleteEmplyee/',
+
+                        data: "{ 'prefix': '" + request.term + "'}",                    //Prefix in data written by user
+                        dataType: "json",
+                        minLength: 2,
+                        maxShowItems: 10,
+                        type: "POST",
+
+                        contentType: "application/json; charset=utf-8",
+                        success: function (data) {
+                            response($.map(data,
+                                  function (item) {
+                                      return item;
+                                  }))
+                        },
+
+                        error: function (response) {
+                            alert(response.responseText);
+                        },
+                        failure: function (response) {
+                            alert(response.responseText);
+                        }
+                    });
+                },
+                change: function (event, ui) {                                      // if value not selected from dropdown then fill zero
+                    if (!ui.item) {
+                        this.value = "";
+                    }
+                },
+                select: function (e, i) {
+                    // $("hfProject").val(i.item.val);
+                    $("#idEmployee").val(i.item.iad);                                // fill hidden textbox with unique id of selected item
+                },
+                minLength: 1
+            });
+        });
+        
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+         autofill to sent multiple (two)  value with prefix (request)
+         
+         $(function ($) {
+
+            var x = document.getElementById('idCompany').value;
+            $("[id*=txtOrganization]").autocomplete({
+                source: function (request, response) {
+                    $.ajax({
+                        url: '/EmployeeInformation/AutoCompleteOrganization/',
+                        data: JSON.stringify({
+                            prefix: request.term,
+                            Company_id: document.getElementById('idCompany').value
+                        }),
+                        jsonpCallback: 'response',
+                        dataType: "json",
+                        minLength: 2,
+                        type: "POST",
+                        contentType: "application/json; charset=utf-8",
+                        success: function (data) {
+                            response($.map(data,
+                                  function (item) {
+                                      return { label: item.label, value: item.label, id: item.iad }
+                                  }))
+                        },
+
+                        error: function (response) {
+                            alert(response.responseText);
+                        },
+                        failure: function (response) {
+                            alert(response.responseText);
+                        }
+                    });
+                    ckeckcompanyprecence();
+                },
+
+                change: function (event, ui) {
+                    if (!ui.item) {
+                        this.value = "";
+                    }
+                },
+                select: function (e, i) {
+                    // $("hfProject").val(i.item.val);
+                    $("#idOrganization").val(i.item.id);
+                },
+
+            });
+        
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        
+         // c# code 
+        public JsonResult AutoCompleteEmplyee(string prefix)
+        {
+            //   BSTProdEntities entities = new BSTProdEntities();
+
+            if (prefix == "*")
+            {
+                var Projects = (from emp in entities.Employees
+
+                                    //   where emp.FullName.StartsWith(prefix) || emp.Code.StartsWith(prefix)
+                                    // where Project.Name.StartsWith(prefix)
+                                    // where (Project.Name.StartsWith(prefix) || Project.Code.StartsWith(prefix))
+
+                                select new
+                                {
+                                    label = emp.Code + " - " + emp.FullName,
+
+                                    iad = emp.Id
+                                    //    Task = entities.Project_Task.t
+                                }).ToList();
+
+                return Json(Projects);
+        
+        
