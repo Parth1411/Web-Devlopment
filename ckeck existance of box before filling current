@@ -1,0 +1,8 @@
+function ckeckcompanyprecence() {
+            var y = document.getElementById('txtCompany').value;
+
+            if (y == "") {
+                alert("Please fill Company field first");
+                return false;
+            }
+        }
