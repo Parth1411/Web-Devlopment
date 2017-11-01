@@ -1,0 +1,83 @@
+Page Layout
+1.	❏    Appealing to target audience
+2.	❏    Consistent site header/logo
+3.	❏    Consistent navigation area
+4.	❏    Informative page title that includes the company/organization/site name
+5.	❏    Page footer area includes copyright, last update, contact e-mail address
+6.	❏    Good use of basic design principles: repetition, contrast, proximity, and alignment
+7.	❏    Displays without horizontal scrolling at 1024×768 and higher resolutions
+8.	❏    Balance of text/graphics/white space on page
+9.	❏    Good contrast between text and background
+10.	❏    Header and nav occupy less than ¼ to ⅓ of the browser at 1024×768 resolution
+11.	❏    Home page has compelling, interesting information above the fold at 1024×768
+12.	❏    Home page downloads within ten seconds on dial-up connection
+13.	❏    Viewport meta tag is used to enhance display on smartphones
+14.	❏    Media queries configure responsive page layout for smartphone and tablet display
+Browser Compatibility
+1.	❏   Displays on popular/current versions of Internet Explorer
+2.	❏   Displays on popular/current versions of Microsoft Edge
+3.	❏   Displays on current versions of Firefox
+4.	❏   Displays on current versions of Google Chrome
+5.	❏   Displays on current versions of Opera
+6.	❏   Displays on current versions of Safari (both Mac and Windows)
+7.	❏   Displays on popular mobile devices (including tablets and smartphones)
+Navigation –
+1.	❏   Main navigation links are clearly and consistently labeled
+2.	❏   Navigation is easy to use for target audience
+3.	❏   If main navigation uses images, clear text links are in the footer section of the page
+4.	❏   If main navigation uses Flash, clear text links are in the footer section of the page
+5.	❏   Navigation is structured in an unordered list
+6.	❏   Navigation aids, such as site map, skip navigation link, or breadcrumbs are used
+7.	❏   All navigation hyperlinks "work" — are not broken
+Color and Graphics
+1.	❏   Color scheme is limited to a maximum of three or four colors plus neutrals
+2.	❏   Color is used consistently
+3.	❏   Text color has sufficient contrast with background color
+4.	❏   Color is not used alone to convey meaning
+5.	❏   Use of color and graphics enhances rather than distracts from the site
+6.	❏   Graphics are optimized and do not significantly slow download
+7.	❏   Each graphic used serves a clear purpose
+8.	❏   Image tags use the alt attribute to configure an alternate text description
+9.	❏   Animated images do not distract from the site and do not endlessly repeat
+Multimedia
+1.	❏   Each audio/video/Flash file used serves a clear purpose
+2.	❏   The audio/video/Flash files used enhance rather than distract from the site
+3.	❏   Captions are provided for each audio or video file used
+4.	❏   Download times for audio or video files are indicated
+5.	❏   Links to downloads for media plug-ins are provided
+Content Presentation
+1.	❏   Common fonts such as Arial or Times New Roman are used
+2.	❏   No more than one web font is used
+3.	❏   Techniques of writing for the Web are used: headings, bullet points, brief paragraphs
+4.	❏   Fonts, font sizes, and font colors are consistently used
+5.	❏   Content provides meaningful, useful information
+6.	❏   Content is organized in a consistent manner
+7.	❏   Information is easy to find (minimal clicks)
+8.	❏   Timeliness: The date of the last revision and/or copyright date is accurate
+9.	❏   Content does not include outdated material
+10.	❏   Content is free of typographical and grammatical errors
+11.	❏   Content provides links to other useful sites
+12.	❏   Avoids the use of "Click here" when writing text for hyperlinks
+13.	❏   Hyperlinks use a consistent set of colors to indicate visited/nonvisited status
+14.	❏   If graphics are used to convey meaning, the alternate text equivalent is provided
+15.	❏   If media is used to convey meaning, the alternate text equivalent is provided
+Functionality
+1.	❏   All internal hyperlinks work
+2.	❏   All external hyperlinks work
+3.	❏   All forms function as expected
+4.	❏   No JavaScript errors are generated
+Accessibility
+1.	❏   If main navigation uses images, text links are in the footer section of the page
+2.	❏   If main navigation uses Flash, text links are in the footer section of the page
+3.	❏   Navigation is structured in an unordered list
+4.	❏   Navigation aids, such as site map, skip navigation link, or breadcrumbs are used
+5.	❏   Color is not used alone to convey meaning
+6.	❏   Text color has sufficient contrast with background color
+7.	❏   Image elements use the alt attribute to configure an alternate text description
+8.	❏   If graphics are used to convey meaning, the alternate text equivalent is provided
+9.	❏   If media is used to convey meaning, the alternate text equivalent is provided
+10.	❏   Captions are provided for each audio or video file used
+11.	❏   Use attributes designed to improve accessibility such as title when appropriate
+12.	❏   Use the id and headers attributes to improve the accessibility of table data
+13.	❏   Configure frames with frame titles and place meaningful content in the noframes area
+14.	❏   The html element's lang attribute indicates the spoken language of the page
